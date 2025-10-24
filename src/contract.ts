@@ -23,8 +23,14 @@ export const CALL_ARGS = {
 };
 
 export const TARGET_CHAIN = {
-  chainIdHex: "0x????", // TODO: Fill with Plasma chain ID in hex
-  chainIdDec: "????",   // TODO: Fill with Plasma chain ID in decimal
+  chainIdHex: "0x2611", // Plasma mainnet chain ID in hex
+  chainIdDec: 9745,     // Plasma mainnet chain ID in decimal
   name: "Plasma",
+  rpcUrls: ["https://rpc.plasma.to"],
+  nativeCurrency: {
+    name: "XPL",
+    symbol: "XPL",
+    decimals: 18
+  },
   blockExplorerUrls: ["https://plasmascan.to/"]
 };

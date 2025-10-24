@@ -80,6 +80,8 @@ function App() {
       const chainConfig = {
         chainId: TARGET_CHAIN.chainIdHex,
         chainName: TARGET_CHAIN.name,
+        rpcUrls: TARGET_CHAIN.rpcUrls,
+        nativeCurrency: TARGET_CHAIN.nativeCurrency,
         blockExplorerUrls: TARGET_CHAIN.blockExplorerUrls,
       };
 
