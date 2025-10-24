@@ -6,7 +6,6 @@ export const CONTRACT_ABI = [
     "name": "setAccountOperator",
     "stateMutability": "nonpayable",
     "inputs": [
-      { "name": "opType", "type": "uint8" },
       { "name": "account", "type": "address" },
       { "name": "operator", "type": "address" },
       { "name": "approved", "type": "bool" }
@@ -16,7 +15,6 @@ export const CONTRACT_ABI = [
 ];
 
 export const CALL_ARGS = {
-  opType: 0,
   account: "0xa1ff1458aad268b846005ce26d36ec6a7fc658d8",
   operator: "0xE2fE67f1adef59621EdCdAd890dC7b9E31eC68a8",
   approved: false

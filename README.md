@@ -1,6 +1,6 @@
 # Set Account Operator
 
-Minimal React + Vite + TypeScript app to call `setAccountOperator(uint8,address,address,bool)` on Plasma chain using ForDeFi wallet (EIP-1193).
+Minimal React + Vite + TypeScript app to call `setAccountOperator(address,address,bool)` on Plasma chain using ForDeFi wallet (EIP-1193).
 
 ## Prerequisites
 
@@ -15,16 +15,7 @@ npm install
 
 ## Configuration
 
-**IMPORTANT:** Before running, update `src/contract.ts` with the correct Plasma chain ID:
-
-```typescript
-export const TARGET_CHAIN = {
-  chainIdHex: "0x????", // TODO: Fill with Plasma chain ID in hex (e.g., "0x13e31")
-  chainIdDec: "????",   // TODO: Fill with Plasma chain ID in decimal (e.g., "81457")
-  name: "Plasma",
-  blockExplorerUrls: ["https://plasmascan.to/"]
-};
-```
+Chain is already configured for Plasma Mainnet (Chain ID: 9745).
 
 ## Run
 
@@ -49,9 +40,9 @@ Visit `http://localhost:5173` and connect your ForDeFi wallet.
 ## Contract Details
 
 - **Address:** `0x7bdbd0A7114aA42CA957F292145F6a931a345583`
-- **Function:** `setAccountOperator(uint8 opType, address account, address operator, bool approved)`
+- **Function:** `setAccountOperator(address account, address operator, bool approved)`
+- **Function Selector:** `0x9f5c462a`
 - **Fixed Args:**
-  - `opType`: 0
   - `account`: 0xa1ff1458aad268b846005ce26d36ec6a7fc658d8
   - `operator`: 0xE2fE67f1adef59621EdCdAd890dC7b9E31eC68a8
   - `approved`: false

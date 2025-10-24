@@ -108,7 +108,6 @@ function App() {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
 
       const gas = await contract.setAccountOperator.estimateGas(
-        CALL_ARGS.opType,
         CALL_ARGS.account,
         CALL_ARGS.operator,
         CALL_ARGS.approved
@@ -141,7 +140,6 @@ function App() {
       const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
 
       await contract.setAccountOperator.staticCall(
-        CALL_ARGS.opType,
         CALL_ARGS.account,
         CALL_ARGS.operator,
         CALL_ARGS.approved
@@ -179,7 +177,6 @@ function App() {
       }
 
       const tx = await contract.setAccountOperator(
-        CALL_ARGS.opType,
         CALL_ARGS.account,
         CALL_ARGS.operator,
         CALL_ARGS.approved,
@@ -257,10 +254,6 @@ function App() {
       <div className={styles.panel}>
         <h2>Call Parameters</h2>
         <div className={styles.argsGrid}>
-          <div className={styles.argRow}>
-            <label>opType:</label>
-            <input type="text" value={CALL_ARGS.opType} readOnly />
-          </div>
           <div className={styles.argRow}>
             <label>account:</label>
             <input type="text" value={CALL_ARGS.account} readOnly />
